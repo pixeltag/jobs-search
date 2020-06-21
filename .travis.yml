@@ -10,7 +10,7 @@ script:
 
 deploy:
   provider: elasticbeanstalk
-  edge: true
+  skip_cleanup: true
   region: "eu-central-1"
   app: "jobs-search"
   env: "JobsSearch-env"
