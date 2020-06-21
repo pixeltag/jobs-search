@@ -10,6 +10,7 @@ script:
 
 deploy:
   provider: elasticbeanstalk
+  edge: true
   region: "eu-central-1"
   app: "jobs-search"
   env: "JobsSearch-env"
