@@ -8,3 +8,17 @@ before_install:
 script:
   - docker run ihabyoussef/jobs-search npm run test
 
+deploy:
+  provider: elasticbeanstalk
+  region: "eu-central-1"
+  app: "jobs-search"
+  env: "JobsSearch-env"
+  bucket_name: "elasticbeanstalk-eu-central-1-066145249599"
+  bucket_path: "jobs-search"
+  on:
+    branch: master
+  access_key_id: $AWS_ACCESS_KEY
+  secret_access_key:
+    secure: "$AWS_SECRET_KEY"
+
+
