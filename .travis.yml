@@ -7,3 +7,4 @@ before_install:
 
 script:
   - docker run ihabyoussef/jobs-search npm run test -- --coverage
+
